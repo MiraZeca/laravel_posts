@@ -42,7 +42,8 @@ class PostController extends Controller
         $pureData = request()->validate([
             'title'=>'required',
             'body'=>'required',
-            'author'=>'required'
+            'author'=>'required',
+            'email'=>'required'
         ]);
 
         $post = new Post();
@@ -51,18 +52,28 @@ class PostController extends Controller
         return redirect('/')->with('created',"Post CREATED");
     }
 
-    public function edit(Post $post)
+    public function edit($id)
     {
-        return view('edit_post',compact('post'));
+        $post = Post::find($id);
+        return view('edit_post',['post'=>$post]);
     }
 
-    public function update(Post $post)
+    public function update($id)
     {
-        $post->update(request()->validate([
+        $post = Post::find($id);
+
+        $pureData = request()->validate([
             'title'=>'required',
             'body'=>'required',
-            'name'=>'required'
-        ]));
+            'name'=>'required',
+            'email'=>'required'
+        ]);
+
+        $post->title = request('title');
+        $post->author = request('name');
+        $post->body = request('body');
+        $post->email = request('email');
+        $post->update();
 
         return redirect('/post/'.$post->id)->with('updated',"Post UPDATED");
     }

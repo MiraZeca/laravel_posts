@@ -1,0 +1,61 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+    padding-bottom: 300px;
+    font-size: medium;
+}
+.blue-grey.darken-1 {
+    background-color: #2f4f4fd4 !important;
+}
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkslategrey;
+}
+
+span:hover, p:hover {
+    color: orange;
+}
+
+nav {
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+nav ul a {
+    font-size: 20px;
+}
+
+.mess {
+    color: orange;
+    background-color: black;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    position: fixed;
+    top: 100px;
+    right: 50px;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: darkslategrey;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer a {
+    color: white;
+    font-size: 20px;
+}
+
+footer {
+    a:hover {
+        color: orange;
+    }
+}

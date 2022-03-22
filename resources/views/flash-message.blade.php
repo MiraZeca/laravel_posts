@@ -1,17 +1,18 @@
 @if ($message = Session::get('updated'))
-<script>
-    M.toast({html: '{{ $message }}', classes: 'rounded'})
-</script>
+<div class="col-4 offset-8">
+  <strong class="mess right">{{ $message }}</strong>
+</div>
 @endif
 
 @if ($message = Session::get('deleted'))
-<script>
-  M.toast({html: '{{ $message }}', classes: 'rounded'})
-</script>
+<div class="col-4 offset-8">
+  <strong class="mess right">{{ $message }}</strong>
+</div>
 @endif
 
 @if ($message = Session::get('created'))
-<script>
-  M.toast({html: '{{ $message }}', classes: 'rounded'})
-</script>
+<div class="col-4 offset-8">
+  <strong class="mess right">{{ $message }}</strong>
+</div>
 @endif
+

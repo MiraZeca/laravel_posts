@@ -19,12 +19,14 @@ class PostTableSeeder extends Seeder
         $post1->title = "First post";
         $post1->body = "Lorem ipsum ...";
         $post1->author = "Mirjana";
+        $post1->email = "mira@gmail.com";
         $post1->save();
 
         $post2 = new Post();
         $post2->title = "Second post";
         $post2->body = "Lorem ipsum ...";
         $post2->author = "Milos";
+        $post2->email = "milos@gmail.com";
         $post2->save();
     }
 }
